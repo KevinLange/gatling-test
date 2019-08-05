@@ -1,9 +1,11 @@
 plugins {
 	id 'org.springframework.boot' version '2.1.6.RELEASE'
 	id 'java'
+	id "com.github.lkishalmi.gatling" version "3.0.2"
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'scala'
 
 group = 'de.kla'
 version = '0.0.1-SNAPSHOT'
@@ -15,5 +17,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	compile 'org.scala-lang:scala-library:2.11.8'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.gatling.highcharts:gatling-charts-highcharts:3.2.0'
 }
